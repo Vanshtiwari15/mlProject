@@ -4,4 +4,7 @@ seaborn
 matplotlib
 catboost
 scikit-learn
+dill
+xgboost
+LinearRegression
 #-e .
