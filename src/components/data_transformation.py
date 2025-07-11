@@ -26,7 +26,10 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function creates and returns the data preprocessing pipeline.
+        This function creates and returns the data preprocessing pipeline. 
+        
+
+        ##SimpleImputer` for filling in missing values.##
         '''
         try:
             numerical_columns = ["writing_score", "reading_score"]
@@ -97,7 +100,9 @@ class DataTransformation:
             train_arr = np.c_[
                 input_feature_train_arr, np.array(target_feature_train_df)
             ]
-            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
+            test_arr = np.c_[
+                input_feature_test_arr, np.array(target_feature_test_df)
+            ]
 
             logging.info("Saving preprocessing object.")
 
