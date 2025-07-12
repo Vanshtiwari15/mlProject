@@ -32,3 +32,24 @@ if st.button("Predict"):
         st.success(f"🎉 Predicted Score: {result['prediction']:.2f}")
     else:
         st.error(f"❌ Error: {response.status_code} - {response.text}")
+
+# At the end, add your name as a footer
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        color: grey;
+        text-align: center;
+    }
+    </style>
+    <div class="footer">
+        <p>Created by Vansh Tiwari</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
